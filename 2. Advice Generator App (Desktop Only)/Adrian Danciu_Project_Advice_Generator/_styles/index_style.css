@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: rgb(37, 41, 49);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.first_layer {
+  display: flex;
+  background-color: rgb(37, 41, 49);
+  height: 85vh;
+  width: 90vw;
+  margin: 80px 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.second_layer {
+  position: relative;
+  border-radius: 5%;
+  height: 400px;
+  width: 650px;
+  background-color: rgb(62, 66, 77);
+}
+
+.advice_id {
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 264px;
+  margin-right: 264px;
+  font-family: "Roboto";
+  font-size: 0.81rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  color: rgb(57, 181, 112);
+  letter-spacing: 5px;
+}
+
+.text_advice {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffff;
+}
+
+.design_lines {
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_divider {
+}
+
+/*
+.left_line {
+  height: 0.5px;
+  width: 222px;
+  background-color: #ffff;
+  margin-left: 80px;
+}
+
+.left_middle {
+  border-radius: 35%;
+  height: 20px;
+  width: 8px;
+  background-color: #ffff;
+  margin-left: 20px;
+}
+
+.right_middle {
+  border-radius: 35%;
+  height: 20px;
+  width: 8px;
+  background-color: #ffff;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.right_line {
+  height: 0.5px;
+  width: 222px;
+  background-color: #ffff;
+  margin-right: 80px;
+} */
+
+.dice_button {
+  height: 70px;
+  width: 70px;
+  background-color: rgb(57, 181, 112);
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 35px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice_button:hover {
+  height: 80px;
+  width: 80px;
+  transition: All 0.2s ease-in-out;
+}
+
+.next_advice {
+  position: absolute;
+  /* margin-top: 10px; */
+}
