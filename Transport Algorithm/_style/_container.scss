@@ -1,0 +1,62 @@
+.container {
+  margin-top: 10rem;
+  font-family: $fontFam;
+
+  .title {
+    color: $orange;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 1.5rem;
+    background-color: #84867b;
+  }
+
+  .content-container {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .input_container {
+    color: $textcolor;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: #84867b;
+  }
+
+  .input {
+    color: $orange;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 25px;
+    border: solid black 2px;
+  }
+
+  .cost-display {
+    color: $orange;
+    border: solid 2px black;
+    border-radius: 25px;
+    padding: 1rem 5rem;
+    font-size: 1.2rem;
+    background-color: #84867b;
+    font-family: $fontFam;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .btn-style {
+    width: 17rem;
+    padding: 0.4rem 1rem;
+    border: solid 2px black;
+    border-radius: 25px;
+    background-color: $orange;
+    font-family: $fontFam;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: #666699;
+}
+
+.display_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container {
+  margin-top: 10rem;
+  font-family: "Cormorant SC", sans-serif;
+}
+.container .title {
+  color: orange;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 1.5rem;
+  background-color: #84867b;
+}
+.container .content-container {
+  width: 10rem;
+  height: 10rem;
+}
+.container .input_container {
+  color: darkblue;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #84867b;
+}
+.container .input {
+  color: orange;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 25px;
+  border: solid black 2px;
+}
+.container .cost-display {
+  color: orange;
+  border: solid 2px black;
+  border-radius: 25px;
+  padding: 1rem 5rem;
+  font-size: 1.2rem;
+  background-color: #84867b;
+  font-family: "Cormorant SC", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.container .btn-style {
+  width: 17rem;
+  padding: 0.4rem 1rem;
+  border: solid 2px black;
+  border-radius: 25px;
+  background-color: orange;
+  font-family: "Cormorant SC", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=style.css.map */
