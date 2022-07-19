@@ -16,8 +16,12 @@ body {
   gap: 1rem;
 }
 
+.hide {
+  display: none;
+}
+
 .container {
-  margin-top: 10rem;
+  margin-top: 3rem;
   font-family: "Cormorant SC", sans-serif;
 }
 .container .title {
@@ -64,6 +68,22 @@ body {
 }
 .container .btn-style {
   width: 17rem;
+  padding: 0.4rem 1rem;
+  border: solid 2px black;
+  border-radius: 25px;
+  background-color: orange;
+  font-family: "Cormorant SC", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.navigation .nav-btn {
+  width: 5rem;
   padding: 0.4rem 1rem;
   border: solid 2px black;
   border-radius: 25px;

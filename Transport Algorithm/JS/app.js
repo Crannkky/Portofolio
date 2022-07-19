@@ -1,5 +1,3 @@
-event.preventDefault();
-
 function transportCost() {
   const weight = parseInt(document.getElementById("weight").value);
   const distance = parseInt(document.getElementById("distance").value);
@@ -18,9 +16,15 @@ function transportCost() {
     cost = 2000 + 0.5 * weight;
   }
 
-  let display_cost = parseInt(
-    (document.getElementById("cost_display").innerHTML = cost + "$")
-  );
+  document.getElementById("cost_display").innerHTML = cost + "$";
+}
+
+function nextPage() {
+  document.getElementById("card-2").classList.remove("hide");
+  document.getElementById("card-1").classList.add("hide");
+  document.getElementById("previous-btn").classList.remove("hide");
+  document.getElementById("next-btn").classList.add("hide");
+  document.getElementById("next-btn-2").classList.remove("hide");
 }
 
 function priceCalc() {
@@ -49,10 +53,26 @@ function priceCalc() {
   document.getElementById("display-cost").innerText = finalPrice + "$";
 }
 
+function nextPage2() {
+  document.getElementById("card-2").classList.add("hide");
+  document.getElementById("card-3").classList.remove("hide");
+  document.getElementById("next-btn-2").classList.add("hide");
+  document.getElementById("previous-btn").classList.add("hide");
+  document.getElementById("previous-btn-2").classList.remove("hide");
+}
+
+function prevPage() {
+  document.getElementById("card-2").classList.add("hide");
+  document.getElementById("card-1").classList.remove("hide");
+  document.getElementById("previous-btn-2").classList.add("hide");
+  document.getElementById("previous-btn").classList.add("hide");
+  document.getElementById("next-btn-2").classList.add("hide");
+  document.getElementById("next-btn").classList.remove("hide");
+}
+
 function showTotalValue() {
   const quantity = document.getElementById("quantity").value;
 
-  // div elements DO NOT HAVE a .value attribute
   const cost = parseInt(document.getElementById("cost_display").innerText);
   const finalPrice = parseInt(
     document.getElementById("display-cost").innerText
@@ -70,6 +90,7 @@ function showTotalValue() {
 
   const total = cost / quantity + finalPrice;
   const discTotal = total - total * extra;
+  const totalPrice = discTotal * quantity;
 
   if (total === 0 || discTotal === 0 || isNaN(total) || isNaN(discTotal)) {
     alert("Please enter package details ");
@@ -77,4 +98,15 @@ function showTotalValue() {
   }
 
   document.getElementById("total_display").innerHTML = discTotal + "$";
+  document.getElementById("total_price_display").innerHTML = totalPrice + "$";
 }
+
+function prevPage2() {
+  document.getElementById("card-2").classList.remove("hide");
+  document.getElementById("card-3").classList.add("hide");
+  document.getElementById("next-btn-2").classList.remove("hide");
+  document.getElementById("previous-btn-2").classList.add("hide");
+  document.getElementById("previous-btn").classList.remove("hide");
+}
+
+// event.preventDefault();

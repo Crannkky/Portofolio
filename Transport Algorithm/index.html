@@ -21,7 +21,7 @@
     <div class="container display_flex">
       <h1 class="title">transport calculator</h1>
 
-      <div id="calculator_form" class="input_container display_flex">
+      <div id="card-1" class="input_container display_flex">
         <label for="weight">Package weight (Kg)</label>
         <input id="weight" class="input" type="text" />
         <label for="distance">distance (km)</label>
@@ -29,33 +29,63 @@
         <button class="btn-style" onclick="transportCost()">
           Calculate transport cost!
         </button>
+        <div id="cost_display" class="cost-display">0$</div>
       </div>
-      <div id="cost_display" class="cost-display">0$</div>
-    </div>
 
-    <div id="price-calculator " class="input_container display_flex hide">
-      <label for="exw">Acquisition price:</label>
-      <input id="exw" class="input" type="text" />
-      <label for="vendor">Client ID:</label>
-      <input id="vendor" class="input" type="text" />
-      <!-- <div id="disc">0%</div> -->
-      <button class="btn-style" onclick="priceCalc()">
-        Calculate the price!
-      </button>
-      <div id="display-cost" class="cost-display">0$</div>
-    </div>
+      <div id="card-2" class="display_flex hide input_container">
+        <label for="exw">Acquisition price:</label>
+        <input id="exw" class="input" type="text" />
+        <label for="vendor">Client ID:</label>
+        <input id="vendor" class="input" type="text" />
+        <!-- <div id="disc">0%</div> -->
+        <button class="btn-style" onclick="priceCalc()">
+          Calculate price without transport!
+        </button>
+        <div id="display-cost" class="cost-display">0$</div>
+      </div>
 
-    <div class="display_flex input_container hide">
-      <label for="quantity">quantity</label>
-      <input id="quantity" class="input" type="text" />
-      <button
-        class="total_price btn-style"
-        id="total-price"
-        onclick="showTotalValue()"
-      >
-        Show Price
-      </button>
-      <div id="total_display" class="btn-style">0$</div>
+      <div id="card-3" class="display_flex hide input_container">
+        <label for="quantity">quantity</label>
+        <input id="quantity" class="input" type="text" />
+        <button
+          class="total_price btn-style"
+          id="total-price"
+          onclick="showTotalValue()"
+        >
+          Show Unit Price & Total Price
+        </button>
+        <label for="cost-display">Unit Price:</label>
+        <div id="total_display" class="cost-display">0$</div>
+        <label for="cost-display">Total Order Price:</label>
+        <div id="total_price_display" class="cost-display">0$</div>
+      </div>
+
+      <div class="navigation">
+        <button
+          id="previous-btn-2"
+          class="prev-btn-2 hide nav-btn"
+          onclick="prevPage2()"
+        >
+          Back
+        </button>
+        <button
+          id="previous-btn"
+          class="prev-btn hide nav-btn"
+          onclick="prevPage()"
+        >
+          Back
+        </button>
+        <button id="next-btn" class="next-btn nav-btn" onclick="nextPage()">
+          Next
+        </button>
+        <button
+          id="next-btn-2"
+          class="next-btn-2 hide nav-btn"
+          onclick="nextPage2()"
+        >
+          Next
+        </button>
+      </div>
     </div>
   </body>
 </html>
