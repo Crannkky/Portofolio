@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Calculator -- Algorithm</title>
+    <!-- STYLE -->
+    <link rel="stylesheet" type="text/css" href="./_style/style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./JS/app.js" defer></script>
+  </head>
+  <body>
+    <div class="container display_flex">
+      <h1 class="title">transport calculator</h1>
+
+      <div id="card-1" class="input_container display_flex">
+        <label for="weight">Package weight (Kg)</label>
+        <input id="weight" class="input" type="text" />
+        <label for="distance">distance (km)</label>
+        <input id="distance" class="input" name="distance" type="text" />
+        <button class="btn-style" onclick="transportCost()">
+          Calculate transport cost!
+        </button>
+        <div id="cost_display" class="cost-display">0$</div>
+      </div>
+
+      <div id="card-2" class="display_flex hide input_container">
+        <label for="exw">Acquisition price:</label>
+        <input id="exw" class="input" type="text" />
+        <label for="vendor">Client ID:</label>
+        <input id="vendor" class="input" type="text" />
+        <!-- <div id="disc">0%</div> -->
+        <button class="btn-style" onclick="priceCalc()">
+          Calculate price without transport!
+        </button>
+        <div id="display-cost" class="cost-display">0$</div>
+      </div>
+
+      <div id="card-3" class="display_flex hide input_container">
+        <label for="quantity">quantity</label>
+        <input id="quantity" class="input" type="text" />
+        <button
+          class="total_price btn-style"
+          id="total-price"
+          onclick="showTotalValue()"
+        >
+          Show Unit Price & Total Price
+        </button>
+        <label for="cost-display">Unit Price:</label>
+        <div id="total_display" class="cost-display">0$</div>
+        <label for="cost-display">Total Order Price:</label>
+        <div id="total_price_display" class="cost-display">0$</div>
+      </div>
+
+      <div class="navigation">
+        <button
+          id="previous-btn-2"
+          class="prev-btn-2 hide nav-btn"
+          onclick="prevPage2()"
+        >
+          Back
+        </button>
+        <button
+          id="previous-btn"
+          class="prev-btn hide nav-btn"
+          onclick="prevPage()"
+        >
+          Back
+        </button>
+        <button id="next-btn" class="next-btn nav-btn" onclick="nextPage()">
+          Next
+        </button>
+        <button
+          id="next-btn-2"
+          class="next-btn-2 hide nav-btn"
+          onclick="nextPage2()"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  .nav-btn {
+    width: 5rem;
+    padding: 0.4rem 1rem;
+    border: solid 2px black;
+    border-radius: 25px;
+    background-color: $orange;
+    font-family: $fontFam;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
