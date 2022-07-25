@@ -4,18 +4,42 @@ function transportCost() {
 
   let cost = 0;
 
-  if (distance < 20 && weight < 3500) {
-    cost = 300;
-  } else if (distance > 10 && distance < 100 && weight < 7500) {
-    cost = 500;
-  } else if (distance > 100 && distance < 300 && weight < 7500) {
-    cost = 700;
-  } else if (distance > 300 && distance < 700 && weight < 7500) {
-    cost = 1000;
-  } else {
-    cost = 2000 + 0.5 * weight;
-  }
+  // if (distance < 20 && weight < 3500) {
+  //   cost = 300;
+  // } else if (distance > 10 && distance < 100 && weight < 7500) {
+  //   cost = 500;
+  // } else if (distance > 100 && distance < 300 && weight < 7500) {
+  //   cost = 700;
+  // } else if (distance > 300 && distance < 700 && weight < 7500) {
+  //   cost = 1000;
+  // } else {
+  //   cost = 2000 + 0.5 * weight;
+  // }
 
+  let buc_1_200 = 59;
+  let buc_2_200 = 44;
+  let buc_1_400 = 73;
+  let buc_2_400 = 58;
+  let buc_1_600 = 94;
+  let buc_2_600 = 79;
+  let buc_1_800 = 116;
+  let buc_2_800 = 96;
+  let buc_1_1000 = 137;
+  let buc_2_1000 = 116;
+
+  if (distance < 40 && weight < 200) {
+    cost = buc_1_200;
+  } else if (distance <= 40 && weight >= 200 && weight <= 400) {
+    cost = buc_1_400;
+  } else if (distance <= 40 && weight >= 400 && weight <= 600) {
+    cost = buc_1_600;
+  } else if (distance <= 40 && weight >= 600 && weight <= 800) {
+    cost = buc_1_800;
+  } else if (distance <= 40 && weight >= 800 && weight <= 1000) {
+    cost = buc_1_1000;
+  } else {
+    cost = 150;
+  }
   document.getElementById("cost_display").innerHTML = cost + "$";
 }
 
@@ -97,8 +121,10 @@ function showTotalValue() {
     return null;
   }
 
-  document.getElementById("total_display").innerHTML = discTotal + "$";
-  document.getElementById("total_price_display").innerHTML = totalPrice + "$";
+  document.getElementById("total_display").innerHTML =
+    discTotal.toFixed(2) + "$";
+  document.getElementById("total_price_display").innerHTML =
+    totalPrice.toFixed(2) + "$";
 }
 
 function prevPage2() {
